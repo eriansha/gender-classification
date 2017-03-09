@@ -15,3 +15,16 @@ X = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [154, 54, 37],
 # labels for each data
 Y = ['male', 'female', 'female', 'female', 'male', 'male',
 	 'male', 'female', 'male', 'female', 'male']
+
+# training data set into 3 algoritms
+# Decision Tree
+train_tree = tree.DecisionTree()
+train_tree = train_clf.fit(X, Y)
+
+# Support Vector Machine
+train_svm = svm.SVC()
+train_svm = train_svm.fit(X, Y)
+
+# Gaussian Naive Bayes
+train_gnb = GaussianNB()
+train_gnb = train_gnb.fit(X, Y)
