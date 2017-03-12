@@ -43,3 +43,13 @@ predict_svm = train_svm.predict(_X)
 
 # predict model with Gaussian Naive Bayes
 predict_gnb = train_gnb.predict(_X)
+
+# results
+r_nn = accuracy_score(_Y, predict_nn)
+r_svm = accuracy_score(_Y, predict_svm)
+r_gnb = accuracy_score(_Y, predict_gnb)
+
+# print the results
+print("Neural Network: ", r_nn)
+print("SVM: ", r_svm)
+print("GaussianNB: ", r_gnb)
