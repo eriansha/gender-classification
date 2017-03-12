@@ -19,7 +19,7 @@ Y = ['male', 'female', 'female', 'female', 'male', 'male',
 # training data set into 3 algoritms
 # Decision Tree
 train_nn = MLPClassifier(solver= 'lbfgs', alpha = 1e-5, hidden_layer_sizes=(5,2), random_state=1)
-train_tree = train_clf.fit(X, Y)
+train_tree = train_nn.fit(X, Y)
 
 # Support Vector Machine
 train_svm = svm.SVC()
