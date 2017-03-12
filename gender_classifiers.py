@@ -1,6 +1,6 @@
 # Compare three algorihms for best result
 # import the depedencies
-from sklearn import tree
+from sklearn.neural_network import MLPClassifier
 from sklearn import svm
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
@@ -18,7 +18,7 @@ Y = ['male', 'female', 'female', 'female', 'male', 'male',
 
 # training data set into 3 algoritms
 # Decision Tree
-train_tree = tree.DecisionTree()
+train_nn = MLPClassifier(solver= 'lbfgs', alpha = 1e-5, hidden_layer_sizes=(5,2), random_state=1)
 train_tree = train_clf.fit(X, Y)
 
 # Support Vector Machine
