@@ -28,3 +28,18 @@ train_svm = train_svm.fit(X, Y)
 # Gaussian Naive Bayes
 train_gnb = GaussianNB()
 train_gnb = train_gnb.fit(X, Y)
+
+# testing model with a new list bodymetrix
+_X = [[169, 61, 42], [155, 45, 38], [165, 65, 41], 
+	[170, 75, 43],[183,83,44],[166,47,36]]
+
+_Y = ['male', 'female', 'male', 'male', 'female', 'female']
+
+# predict model with Neural Network
+predict_nn = train_nn.predict(_X)
+
+# predict model with SVM
+predict_svm = train_svm.predict(_X)
+
+# predict model with Gaussian Naive Bayes
+predict_gnb = train_gnb.predict(_X)
